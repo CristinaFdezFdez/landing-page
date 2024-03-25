@@ -1,0 +1,188 @@
+@font-face {
+    font-family: "FuentePrueba";
+    src: url(../assets/MotoGPDisplay-Bold.ttf);
+}
+
+body {
+    font-family: "FuentePrueba";
+    background-image: url(../imagenes/dos.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+
+
+.login-container {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-form input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: red;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(195, 12, 12);
+    color: white;
+    border: none;
+    justify-items: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.google {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(37, 37, 199);
+    color: white;
+    border: none;
+    justify-items: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+button.google:hover {
+    background-color: blue !important;
+    font-weight: bold;
+}
+
+
+.login-form button:hover {
+    background-color: red;
+    font-weight: bold;
+
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 2px solid rgb(195, 12, 12);
+    ;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+legend {
+    color: rgb(195, 12, 12);
+    ;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+a .salir{
+    text-align: left;
+}
+#warning{
+    color: red;
+    display: none;
+    font-size: 0.8rem;
+}
+
+/***Validación***/
+
+input:optional{
+    border: 2px solid rgb(255, 187, 40);
+    background-color: lightgoldenrodyellow;
+}
+input:invalid{
+    background-color: lightsalmon;
+    border-color: red;
+    outline: none;
+}
+input:valid{
+    border: 2px solid green;
+    background-color: lightgreen;
+    outline: none;
+}
+:required:placeholder-shown{
+    border: 1px solid #555;
+    background-color: lightgray;
+}
+:required:not(:placeholder-shown):invalid + #warning {
+background-color: black;
+display: block;
+text-align: center;
+}
+
+.register-form,
+.login-form {
+    display: none;
+}
+
+.register-form:target,
+.login-form:target {
+    display: block;
+}
+#menu{
+    width: 300px;
+    height: 100%;
+    background-color: lightgreen;
+    top: 0px;
+    left: -300px;
+    position: absolute;
+    transition: 0.6s;
+}
+#menu:target{
+    top: 0px;
+    left: 0px;
+    
+}
+#menu:not(:target){
+    top: 0px;
+    left: -300px;
+    
+}
+@media (max-width: 768px) {
+    .login-container {
+        width: 100vw;
+    }
+}

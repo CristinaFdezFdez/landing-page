@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imagenes/Moto_Gp_logo.svg.png">
+    <link rel="stylesheet" href="./css/styleform.css">
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="login-container">
+        <fieldset>
+            <legend><img class="logo" src="imagenes/logo.png" alt="Fildseat"></legend>
+            <h2><button><a href="#login-form">Iniciar Sesión</a></button>
+                <button><a href="#register-form">Registrarse</a></h2></button>
+            <form id="login-form" class="login-form" action="#" method="POST">
+                <input type="text" name="username" placeholder="Usuario" required><br><br><br>
+                <input type="password" name="password" placeholder="Contraseña" required><br><br><br>
+                <button type="submit">INICIAR SESIÓN</button><br><br>
+                <button class="google">
+                    <img src="./imagenes/logo-google.png" alt="Google">
+                    ENTRAR CON GOOGLE
+                </button>
+                
+            </form>
+            <form id="register-form" class="login-form" action="#" method="POST">
+                <input type="email" name="email" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><p id="warning">Por favor, ingrese una dirección de correo electrónico válida</p><br><br><br>
+                <input type="text" name="nombre" placeholder="Nombre" required><br><br><br>
+                <input type="text" name="new_username" placeholder="Usuario" required><br><br><br>
+                <input type="password" name="new_password" placeholder="Contraseña" required><br><br><br>
+                <button type="submit">REGISTRARSE</button><br><br>
+                <button class="google">
+                    <img src="./imagenes/logo-google.png" alt="Google">
+                    ENTRAR CON GOOGLE
+                </button>
+            </form>
+        </fieldset>
+        <a class="salir" href="index.html" class="close-btn">Volver</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,501 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: "FuentePrueba";
+    src: url(../assets/MotoGPDisplay-Bold.ttf);
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "FuentePrueba";
+    background-color: black;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #222;
+    color: #fff;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Center items horizontally */
+    align-items: flex-start;
+    padding: 10px;
+    background-color: black;
+    flex-grow: 1;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+}
+#s2{
+    background: rgb(170,10,10);
+background: linear-gradient(24deg, rgba(170,10,10,1) 0%, black 39%);
+}
+#s4{
+    background: rgb(170,10,10);
+background: linear-gradient(24deg, rgba(170,10,10,1) 0%, black 39%);
+}
+
+.flex__item {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+.piloto-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.video-and-text-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.video-wrapper {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.video {
+    width: 100%;
+}
+
+.text-container {
+    flex: 1;
+    max-width: 400px;
+}
+
+@media (max-width: 768px) {
+    .video-and-text-container {
+        flex-direction: column;
+    }
+
+    .video-wrapper,
+    .text-container {
+        margin-right: 0;
+    }
+}
+
+#parallax1,
+#parallax2,
+#parallax3 {
+height: 100vh; 
+width: 100%;
+}
+
+#parallax1 img,
+#parallax2 img,
+#parallax3 img {
+width: 100%;
+height: auto;
+display: block;
+margin: 0 auto;
+max-width: 100%;
+max-height: 100%;
+}
+
+
+footer {
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+}
+
+
+span{
+    color: red;
+}
+
+a:hover{
+    color: red;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+}
+
+
+
+.flex__item {
+    text-align: center;
+    padding: 1rem;
+}
+
+.grid__item-item3 {
+    grid-column: span 6;
+    font-family: Slack-Larsseit, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1.0625;
+    letter-spacing: -1.5px;
+    color: white;
+    text-align: left;
+    padding: 19px 40px 20px;
+
+}
+
+.grid__item-item6 {
+    grid-column: span 6;
+    align-items: center;
+}
+
+.grid__item-item12 {
+    grid-column: span 12;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    background-image: url(imagenes/img1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+ul {
+    color: white;
+    display: flex;
+}
+
+.logo {
+    width: 160px;
+    height: 160px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100vw;
+}
+
+.content {
+    margin-top: 60px; 
+}
+
+.nav>* {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.button1 {
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    border-radius: 4px;
+    border: 1px solid white;
+    color: red;
+    white-space: nowrap;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Slack-Circular-Pro, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1.2857;
+    letter-spacing: .8px;
+    font-size: .875rem;
+    padding: 19px 40px 20px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s; 
+    display: block;
+    width: 60%;
+}
+
+.button1:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 0px 15px white; 
+    background-color: red;
+    color: white; 
+}
+
+.snap-section {
+    height: auto;
+    position: relative;
+    grid-column: 1 / span 12;
+    padding: 20px;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.snap-section:nth-child(2),
+.snap-section:nth-child(3),
+.snap-section:nth-child(4) {
+    color: white;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item.item10,
+.item.item11 {
+    grid-column: span 4;
+    white-space: nowrap;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+p {
+    color: white;
+    font-size: 3em;
+}
+
+.grid__item:not(.grid__item-item6) video {
+    display: none;
+}
+
+.piloto-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 200px;
+    text-align: center;
+    float: left;
+}
+
+.piloto-card p {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.piloto-card:hover p {
+    color: red;
+    cursor: pointer;
+}
+
+.piloto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px white;
+}
+
+.piloto-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.columnas {
+    width: 95vw;
+    margin: auto;
+    text-align: center;
+    outline-offset: -15px;
+    column-count: 4;
+    column-gap: 3em;
+    column-rule: 1px solid white;
+    padding: 10px;
+    display: inline-block;
+}
+
+.extendido {
+    column-span: all;
+    text-align: center;
+}
+
+.columnas img {
+    width: 100%;
+    align-items: center;
+    height: auto;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    transition: filter 0.3s ease;
+}
+
+.columnas img:hover {
+    filter: saturate(200%); 
+}
+
+.columnas p {
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    overflow-x: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    cursor: pointer;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: white;
+}
+
+tr:hover {
+    background-color: gray;
+}
+
+.icono-equipo {
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+}
+
+#parallax1, #parallax2, #parallax3 {
+    height: 650px;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-attachment: fixed;
+    width: 100%;
+    grid-column: span 12;
+}
+
+#texto2{
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    grid-column: span 12;
+}
+
+#parallax2 {
+    background-image: url(../imagenes/dos.jpg);
+}
+
+#parallax3 {
+    background-image: url(../imagenes/tres.jpg);
+}
+
+iframe{
+    grid-column: span 12;
+    width: 100vw;
+}
+
+footer {
+    grid-column: span 12;
+    width: 100vw;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0; 
+    margin-right: 20px;
+    text-align: center;
+}
+
+footer img {
+    margin: 0 10px; 
+    max-width: 100px; 
+}
+
+footer a {
+    margin: 0 10px; 
+    max-width: 100px; 
+}
+
+footer p {
+    margin: 0 10px;
+}
+
+#bola {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0) 70%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all;
+    transform: translate(20px, 20px);
+    filter: blur(2px);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    /* Cambiar el número de columnas a 2 */
+    .columnas {
+        column-count: 2;
+    }
+
+    /* Estilos para ajustar las imágenes del parallax en pantallas pequeñas */
+    #parallax2 img,
+    #parallax3 img {
+        height: auto; /* Ajustar la altura de la imagen automáticamente */
+        width: 100%; /* Asegurar que la imagen ocupe el ancho completo del contenedor */
+    }
+}
+@keyframes moveIcon {
+    0% {
+        transform: translateX(-1200px); /* Comienza desde fuera del lado derecho de la pantalla */
+    }
+
+    50% {
+        transform: translateX(0); /* Llega al centro de la pantalla */
+    }
+
+    100% {
+        transform: translateX(1400px); /* Desaparece fuera del lado izquierdo de la pantalla */
+    }
+}
+
+
+.icon-container {
+    display: inline-block;
+    margin-left: 10px;
+    z-index: 1;
+    animation: moveIcon 5s ease-in-out infinite;
+}
+.text-container {
+    position: relative;
+    z-index: 2; 
+    color: white; 
+}
+
+.icon-container img {
+    width: 55px;
+    height: 40px;
+}
+
+
+@media (max-width: 400px) {
+    .snap-section {
+        justify-content: center; /* Centra los cards horizontalmente */
+    }
+
+    .piloto-card {
+        margin-bottom: 20px; /* Margen inferior entre los cards */
+    }
+}
+
+
+
+
+
