@@ -6,6 +6,8 @@ Este proyecto es un sitio web dedicado al mundo de MotoGP, que incluye informaci
 
 - [Capturas de pantalla](#capturas-de-pantalla)
 - [Tecnologías utilizadas](#tecnologías-utilizadas)
+- [Video de demostración](#video-de-demostración)
+
 
 
 ## Capturas de pantalla
