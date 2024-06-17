@@ -487,13 +487,36 @@ footer p {
 
 @media (max-width: 400px) {
     .snap-section {
-        justify-content: center; /* Centra los cards horizontalmente */
+        justify-content: center; 
     }
 
     .piloto-card {
-        margin-bottom: 20px; /* Margen inferior entre los cards */
+        margin-bottom: 20px; 
     }
 }
+@media (max-width: 768px) {
+    #parallax1,
+    #parallax2,
+    #parallax3 {
+        height: 400px;
+        background-position: center center; 
+        background-size: cover; 
+    }
+
+    #parallax2,
+    #parallax3 {
+        background-attachment: scroll; 
+    }
+
+    #parallax2 img,
+    #parallax3 img {
+        width: 100%; 
+        height: auto;
+        display: block;
+        margin: 0 auto; 
+    }
+}
+
 
 
 
