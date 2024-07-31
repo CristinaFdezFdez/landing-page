@@ -29,7 +29,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* Center items horizontally */
     align-items: flex-start;
     padding: 10px;
     background-color: black;
@@ -429,13 +428,12 @@ footer p {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 740px) {
     .nav {
         display: flex;
         flex-direction: column;
         gap: 1em;
     }
-    /* Cambiar el número de columnas a 2 */
     .columnas {
         column-count: 1;
     }
@@ -476,8 +474,8 @@ footer p {
 }
 
 .icon-container img {
-    width: 55px;
-    height: 40px;
+    width: 35px;
+    height: 20px;
 }
 
 
@@ -493,22 +491,18 @@ footer p {
     .piloto-card {
         width: 100%; /* Ajusta el ancho de las tarjetas al 100% del contenedor */
         margin-bottom: 20px;
-        box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */
+        align-items: center;
         display: block; /* Asegura que la tarjeta sea visible */
     }
 
     /* Solo muestra una card en dispositivos móviles */
     .piloto-card {
-        display: block; /* Asegura que se muestre solo una tarjeta */
+        display: block;
     }
 
-    /* Oculta las tarjetas adicionales */
-    .piloto-card:not(:first-child) {
-        display: none; /* Oculta todas las tarjetas excepto la primera */
-    }
+
 }
 
-/* Ajustes para pantallas de hasta 768px */
 @media (max-width: 768px) {
     #parallax1,
     #parallax2,
