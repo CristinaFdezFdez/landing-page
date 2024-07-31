@@ -1,19 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho total */
-    scroll-behavior: smooth;
 }
-
 @font-face {
     font-family: "FuentePrueba";
     src: url(../assets/MotoGPDisplay-Bold.ttf);
 }
-
 body {
+    margin: 0;
+    padding: 0;
     font-family: "FuentePrueba";
     background-color: black;
-    overflow-x: hidden; /* Previene el desplazamiento horizontal */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -32,24 +29,21 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    /* Center items horizontally */
     align-items: flex-start;
     padding: 10px;
     background-color: black;
     flex-grow: 1;
-    width: 100%; /* Asegura que ocupa el ancho completo */
 }
 
 .nav {
     display: flex;
     flex-direction: row;
-    justify-content: center; /* Centra los elementos dentro del contenedor nav */
-    align-items: center;
-    background-color: black;
-    width: 100%; /* Asegura que ocupa el ancho completo */
 }
 
-#s2, #s4 {
-    background: linear-gradient(24deg, rgba(170,10,10,1) 0%, black 39%);
+#s4{
+    background: rgb(170,10,10);
+background: linear-gradient(24deg, rgba(170,10,10,1) 0%, black 39%);
 }
 
 .flex__item {
@@ -58,44 +52,16 @@ body {
 }
 
 .piloto-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 20px;
-    width: 100%; /* Asegura que ocupa el ancho completo en móviles */
-    max-width: 300px; /* Limita el tamaño en pantallas grandes */
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.piloto-card p {
-    font-size: 16px;
-    color: white;
-    margin-bottom: 0;
-    margin-top: 10px;
-}
-
-.piloto-card:hover p {
-    color: red;
-    cursor: pointer;
-}
-
-.piloto-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 16px white;
-}
-
-.piloto-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
 }
 
 .video-and-text-container {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100%;
 }
 
 .video-wrapper {
@@ -123,36 +89,38 @@ body {
     }
 }
 
-#parallax1, #parallax2, #parallax3 {
-    height: 100vh; 
-    width: 100%;
-    background-size: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+#parallax1,
+#parallax2,
+#parallax3 {
+height: 100vh; 
+width: 100%;
 }
 
 #parallax1 img,
 #parallax2 img,
 #parallax3 img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    max-height: 100%;
+width: 100%;
+height: auto;
+display: block;
+margin: 0 auto;
+max-width: 100%;
+max-height: 100%;
 }
+
 
 footer {
     padding: 10px;
     background-color: black;
     color: #fff;
     text-align: center;
-    width: 100%; /* Asegura que ocupa el ancho completo */
 }
 
-span {
+
+span{
     color: red;
 }
 
-a:hover {
+a:hover{
     color: red;
 }
 
@@ -161,14 +129,23 @@ h1 {
     color: red;
 }
 
+
+
+.flex__item {
+    text-align: center;
+    padding: 1rem;
+}
+
 .grid__item-item3 {
     grid-column: span 6;
+    font-family: Slack-Larsseit, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
     font-weight: 700;
     line-height: 1.0625;
     letter-spacing: -1.5px;
     color: white;
     text-align: left;
     padding: 19px 40px 20px;
+
 }
 
 .grid__item-item6 {
@@ -189,10 +166,10 @@ h1 {
     background-size: cover;
 }
 
+
 ul {
     color: white;
     display: flex;
-    list-style: none; /* Elimina los marcadores de la lista */
 }
 
 .logo {
@@ -201,13 +178,15 @@ ul {
 }
 
 .nav {
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: black;
+    width: 100vw;
 }
 
 .content {
-    margin-top: 60px;
+    margin-top: 60px; 
 }
 
 .nav>* {
@@ -216,19 +195,24 @@ ul {
 }
 
 .button1 {
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    border-radius: 4px;
     border: 1px solid white;
     color: red;
+    white-space: nowrap;
     text-align: center;
     text-transform: uppercase;
+    font-family: Slack-Circular-Pro, "Helvetica Neue", Helvetica, "Segoe UI", Tahoma, Arial, sans-serif;
     font-weight: 700;
     line-height: 1.2857;
     letter-spacing: .8px;
     font-size: .875rem;
     padding: 19px 40px 20px;
     transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s; 
-    display: inline-block; /* Cambiado de block a inline-block para centrar */
-    width: auto; /* Cambiado de 60% a auto para ajustar según contenido */
-    margin: 0 auto; /* Centra el botón en su contenedor */
+    display: block;
+    width: 60%;
 }
 
 .button1:hover {
@@ -247,7 +231,6 @@ ul {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100%; /* Asegura que ocupa el ancho completo */
 }
 
 .snap-section:nth-child(2),
@@ -262,6 +245,7 @@ ul {
 .item.item10,
 .item.item11 {
     grid-column: span 4;
+    white-space: nowrap;
 }
 
 a {
@@ -280,10 +264,44 @@ p {
     display: none;
 }
 
+.piloto-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 200px;
+    text-align: center;
+    float: left;
+}
+
+.piloto-card p {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.piloto-card:hover p {
+    color: red;
+    cursor: pointer;
+}
+
+.piloto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px white;
+}
+
+.piloto-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
 .columnas {
-    width: 100%;
+    width: 95vw;
     margin: auto;
     text-align: center;
+    outline-offset: -15px;
     column-count: 4;
     column-gap: 3em;
     column-rule: 1px solid white;
@@ -298,8 +316,10 @@ p {
 
 .columnas img {
     width: 100%;
+    align-items: center;
     height: auto;
     margin-bottom: 10px;
+    overflow-x: hidden;
     transition: filter 0.3s ease;
 }
 
@@ -313,6 +333,7 @@ p {
     cursor: pointer;
     font-size: 14px;
     color: white;
+    overflow-x: hidden;
 }
 
 table {
@@ -349,7 +370,7 @@ tr:hover {
     grid-column: span 12;
 }
 
-#texto2 {
+#texto2{
     text-align: center;
     color: white;
     font-size: 2rem;
@@ -364,7 +385,7 @@ tr:hover {
     background-image: url(../imagenes/tres.jpg);
 }
 
-iframe {
+iframe{
     grid-column: span 12;
     width: 100vw;
 }
@@ -375,18 +396,19 @@ footer {
     display: inline-block;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px 0; 
+    margin-right: 20px;
     text-align: center;
 }
 
 footer img {
-    margin: 0 10px;
-    max-width: 100px;
+    margin: 0 10px; 
+    max-width: 100px; 
 }
 
 footer a {
-    margin: 0 10px;
-    max-width: 100px;
+    margin: 0 10px; 
+    max-width: 100px; 
 }
 
 footer p {
@@ -404,25 +426,53 @@ footer p {
     filter: blur(2px);
 }
 
+
+
+
+@media (max-width: 768px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    /* Cambiar el número de columnas a 2 */
+    .columnas {
+        column-count: 1;
+    }
+
+    /* Estilos para ajustar las imágenes del parallax en pantallas pequeñas */
+    #parallax2 img,
+    #parallax3 img {
+        height: auto; /* Ajustar la altura de la imagen automáticamente */
+        width: 100%; /* Asegurar que la imagen ocupe el ancho completo del contenedor */
+    }
+}
 @keyframes moveIcon {
     0% {
-        transform: translateX(-1200px);
+        transform: translateX(-1500px);
     }
 
     50% {
-        transform: translateX(0);
+        transform: translateX(0); 
     }
 
     100% {
-        transform: translateX(1400px);
+        transform: translateX(calc(100vw - 55px)); 
     }
 }
 
+
 .icon-container {
     display: inline-block;
+    overflow: hidden;
     margin-left: 10px;
     z-index: 1;
     animation: moveIcon 5s ease-in-out infinite;
+}
+.text-container {
+    position: relative;
+    z-index: 2; 
+    color: white; 
 }
 
 .icon-container img {
@@ -430,48 +480,50 @@ footer p {
     height: 40px;
 }
 
-@media (max-width: 768px) {
-    .nav {
-        flex-direction: column;
-        gap: 1em;
-    }
-
-    .columnas {
-        column-count: 2;
-    }
-
-    #parallax1, #parallax2, #parallax3 {
-        height: 400px;
-        background-position: center center;
-        background-size: cover;
-    }
-
-    #parallax2, #parallax3 {
-        background-attachment: scroll;
-    }
-
-    #parallax2 img, #parallax3 img {
-        height: auto;
-        width: 100%;
-        display: block;
-        margin: 0 auto;
-    }
-
-    .piloto-card {
-        width: 100%;
-        max-width: 300px;
-        margin-bottom: 20px;
-    }
-}
 
 @media (max-width: 400px) {
     .snap-section {
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box; /* Incluye padding y border en el ancho total */
     }
 
     .piloto-card {
+        width: 100%; /* Ajusta el ancho de las tarjetas al 100% del contenedor */
         margin-bottom: 20px;
-        width: 100%;
-        max-width: 300px;
+        box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */
+        display: block; /* Asegura que la tarjeta sea visible */
+    }
+
+    /* Solo muestra una card en dispositivos móviles */
+    .piloto-card {
+        display: block; /* Asegura que se muestre solo una tarjeta */
+    }
+
+    /* Oculta las tarjetas adicionales */
+    .piloto-card:not(:first-child) {
+        display: none; /* Oculta todas las tarjetas excepto la primera */
+    }
+}
+
+/* Ajustes para pantallas de hasta 768px */
+@media (max-width: 768px) {
+    #parallax1,
+    #parallax2,
+    #parallax3 {
+        height: 400px; /* Ajusta la altura para pantallas más pequeñas */
+        background-position: center center;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+
+    #parallax2 img,
+    #parallax3 img {
+        width: 100%; /* Asegura que las imágenes ocupen el ancho completo del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+        display: block;
+        margin: 0 auto; /* Centra las imágenes horizontalmente */
     }
 }
