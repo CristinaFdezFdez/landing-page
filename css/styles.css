@@ -457,7 +457,7 @@ footer p {
     }
 
     100% {
-        transform: translateX(calc(100vw - 55px)); 
+        transform: translateX(calc(100vw - 220px)); 
     }
 }
 
